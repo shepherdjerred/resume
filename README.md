@@ -1,9 +1,4 @@
 # Resume
-Forked from https://github.com/sb2nov/resume
+[![Build Status](https://travis-ci.com/shepherdjerred/resume.svg?branch=master)](https://travis-ci.com/shepherdjerred/resume)
 
-### Build using Docker
-```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
-```
-
+Forked from https://github.com/sb2nov/resum
