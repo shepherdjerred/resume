@@ -1,0 +1,138 @@
+%-------------------------
+% Resume in Latex
+% Author: Sourabh Bajaj, modified by Jerred Shepherd
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Jerred Shepherd} & Email : \href{mailto:shepherdjerred@gmail.com}{shepherdjerred@gmail.com}\\
+  \href{https://shepherdjerred.com/}{https://shepherdjerred.com}\\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Harding University}{Searcy, AR}
+      {Bachelor of Science in Software Development;  GPA: 3.18}{August 2015 -- April. 2019}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Amazon Web Services}{Seattle, WA}
+      {Software Development Engineer}{July 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2020/05/aws-systems-manager-now-supports-resource-groups-as-targets-for-state-manager/}{State Manager resource groups feature}}
+          {Designed, implemented, tested, and deployed a feature which added support for resource group targets to AWS Systems Manager's desired state configuration service.}
+        \resumeItem{Developer productivity improvements}{Developed several productivity tools for my team which led to significant time savings when developing and deploying code including a notification service for CI/CD events, a service operations report generator, and an infrastructure CLI toolkit.}
+        \resumeItem{Intern mentorship}{Mentored an intern during their 12 week internship. I identified a project and scoped the requirements. I also helped the intern during their onboarding, design, and the development of their project which was ultimately deployed to production.}
+        \resumeItem{Front end for a new AWS service}{Implemented front-end views for a new AWS service using React and TypeScript.}
+        \resumeItem{Service fleet optimization}
+          {Identified ideal server hardware configuration for my team's software stack which led to a \~66\% reduction in server cost.}
+        \resumeItem{Improved automated testing}{Identified gaps in automated testing and wrote a document detailing how our service could be better tested to reduce defects and prevent performance regressions. Implemented continuous testing and improved integration test infrastructure.}
+        \resumeItem{Refactored infrastructure code}{Performed a major refactor on several infrastructure-as-code software packages which greatly reduced duplicated code, defects, and cut the time to build or update our service's infrastructure stack by about 50\%.}
+        \resumeItemListEnd
+      
+    \resumeSubheading
+      {Amazon Web Services}{Seattle, WA}
+      {Software Development Engineer Intern}{May 2018 - July 2018}
+      \resumeItemListStart
+        \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2019/02/aws-systems-manager-state-manager-enables-document-sharing-across-accounts/}{State Manager document sharing}}
+          {Designed, implemented, tested, and deployed a feature which adds cross-account document sharing for AWS Systems Manager's desired state configuration  service.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}
+      {A cross-platform game and game engine written from scratch in Java 11. Uses OpenGL  for 2D graphics rendering and netty for low-level networking with TCP and UDP sockets. Includes \href{https://github.com/harding-capstone/ai}{an AI} trained with a genetic algorithm and a \href{https://github.com/harding-capstone/logic}{robust implementation} of the \href{https://en.wikipedia.org/wiki/Quoridor}{Quoridor} board game.}
+      \resumeSubItem{\href{https://better-skill-capped.shepherdjerred.com/}{Better Skill Capped}}{An improved front-end for the \href{https://www.skill-capped.com/lol}{Skill Capped} website which implements features the original is lacking such as  fuzzy searching, video bookmarking, and offline video viewing. Written using Python, TypeScript, and React. Hosted on AWS with Lambda and S3.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/gpt-2-simple-sagemaker-container}{GPT-2 SageMaker Container}}{Docker image and AWS Lambda Function to train and serve a fine-tined GPT-2 model with AWS SageMaker}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
