@@ -1,8 +1,15 @@
 language: generic
-
 services:
-  - docker
-
+- docker
 script:
 - docker build -t latex .
 - docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
+deploy:
+  provider: s3
+  access_key_id: AKIA2CQO232KOCUYTIUT
+  secret_access_key:
+    secure: Yn/76PscSaqIf1b8LspG7vasCAU6QTXChdUpK/rdU0ISo4AjCFrDKRXJKHPiIMCfXuzXVWkykQK55cT5mQVaFBE1P3XUf04ept68g+C+fgTndAHoUE9L+vxPOtt7wa7pombMWlRVoRKe6RMQr9hhwxVSnQIDNSxrKwq44ojHRaWAJWenJHUPqkgj5nNWYeL6bWiggUeWCfrXuWsQrOxjRnnzV/LztsLNiojjEV4rlJ3nnZiHnZn6yR9cUCgBs+akZ+dnDghLqu9Xf85W3cWjhaMOjZqLC5Rvc7QTUp+YR8YX+3kH3mvxNeg5hY5d6i0YncfjF3VE8wUEJNBIBqh8U5S8YMZoXfSDN2oCj/pLFbpn9yfrNp+Zjxx/lxeYw0Xo6aycTQXVK/LfdiyQSEZEbmlOyrNDksHQ1nlJuShndc+8fBze8Pl1jM7rQ3HB/XgGjzec4OEyaeknA9iq/GV9BgNhiG60rEjSGNT+Os3D6hMhcu6PfQX4xXsPCEKSay9BoICabsT7K8keWarm1rr1nIWamme+qlXDDVcpvTgjWnR5NnVRm7E3EPJH35AshFAIGOOR8XmzkCSoazYix9E4w0ouYnUyFEQtejwxcFzREz8njY2fJYxICin5TXE03kU+bALjfTs+bmn4o0RMjbHWSlcv7VzlpdukzhIa7IMzUbw=
+  bucket: com.shepherdjerred.resume
+  skip_cleanup: true
+  region: us-east-1
+  glob: resume.pdf
