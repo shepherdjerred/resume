@@ -3,4 +3,4 @@
 
 Forked from https://github.com/sb2nov/resume
 
-[View the latest version](https://s3.us-east-1.amazonaws.com/com.shepherdjerred.resume/resume.pdf)
+[View the latest version](http://resume.shepherdjerred.com/)
