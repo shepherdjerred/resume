@@ -3,4 +3,4 @@
 
 Forked from https://github.com/sb2nov/resume
 
-[View the latest version](http://resume.shepherdjerred.com/)
+[View the latest version](https://resume.shepherdjerred.com)
