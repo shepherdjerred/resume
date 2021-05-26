@@ -13,10 +13,15 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -81,8 +86,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jerred Shepherd} & Email : \href{mailto:shepherdjerred@gmail.com}{shepherdjerred@gmail.com}\\
-  \href{https://shepherdjerred.com/}{https://shepherdjerred.com}\\
+  \textbf{\Large Jerred Shepherd} & Email: \href{mailto:shepherdjerred@gmail.com}{shepherdjerred@gmail.com}\\
+  \href{https://shepherdjerred.com/}{https://shepherdjerred.com} & GitHub: \href{https://github.com/shepherdjerred}{https://github.com/shepherdjerred}
 \end{tabular*}
 
 
@@ -105,13 +110,13 @@
       \resumeItemListStart
         \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2020/05/aws-systems-manager-now-supports-resource-groups-as-targets-for-state-manager/}{State Manager resource groups feature}}
           {Designed, implemented, tested, and deployed a feature which added support for resource group targets to AWS Systems Manager's desired state configuration service.}
-        \resumeItem{Developer productivity improvements}{Developed several productivity tools for my team which led to significant time savings when developing and deploying code including a notification service for CI/CD events, a service operations report generator, and an infrastructure CLI toolkit.}
-        \resumeItem{Intern mentorship}{Mentored an intern during their 12 week internship. I identified a project and scoped the requirements. I also helped the intern during their onboarding, design, and the development of their project which was ultimately deployed to production.}
-        \resumeItem{Front end for a new AWS service}{Implemented front-end views for a new AWS service using React and TypeScript.}
+        \resumeItem{Developer productivity improvements}{Developed several productivity tools for use by the State Manager team which led to a significant time savings when developing and deploying code including a notification service for CI/CD events, a service operations report generator, and an infrastructure CLI toolkit.}
+        \resumeItem{Intern mentorship}{Mentored an intern during their twelve week internship who was ultimately offered a full-time position. Identified a project and scoped the requirements for the intern. Helped the intern during their onboarding, design, and the development of their project which was deployed to production.}
+        \resumeItem{Front end for \href{https://docs.aws.amazon.com/systems-manager/latest/userguide/change-manager.html}{AWS Change Manager}}{Implemented the front-end for AWS Change Manager using React and TypeScript.}
         \resumeItem{Service fleet optimization}
-          {Identified ideal server hardware configuration for my team's software stack which led to a 66\% reduction in server cost.}
-        \resumeItem{Improved automated testing}{Identified gaps in automated testing and wrote a document detailing how our service could be better tested to reduce defects and prevent performance regressions. Implemented continuous testing and improved integration test infrastructure.}
-        \resumeItem{Refactored infrastructure code}{Performed a major refactor on several infrastructure-as-code software packages which greatly reduced duplicated code, defects, and cut the time to build or update our service's infrastructure stack by about 50\%.}
+          {Identified and implemented ideal server hardware configuration for team's software stack. Updated service dependencies and language runtimes. These improvements led to a 66\% reduction in server infrastructure cost.}
+        \resumeItem{Built service in \href{https://aws.amazon.com/blogs/publicsector/announcing-the-new-aws-secret-region/}{top secret AWS region}}{Modified service code and infrastructure while supporting requirements top secret security constraints.}
+        \resumeItem{Infrastructure improvements}{Significantly reduced the time to build a new AWS region for the State Manager service. Identified and implemented process improvements which led to a drastic reduction in operational work.}
         \resumeItemListEnd
       
     \resumeSubheading
