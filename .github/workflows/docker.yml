@@ -1,0 +1,23 @@
+name: Docker Image CI/CD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build -t latex .
+      - name: Run the Docker image
+        run: docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
+      - uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: "resume.shepherdjerred.com"
+          AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: resume.pdf
