@@ -1,3 +1,6 @@
 *.pdf
 .idea
 *.iml
+resume.*
+!resume.tex
+texput.log
