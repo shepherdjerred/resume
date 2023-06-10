@@ -2,6 +2,6 @@
 
 [![Docker Image CI/CD](https://github.com/shepherdjerred/resume/actions/workflows/docker.yml/badge.svg)](https://github.com/shepherdjerred/resume/actions/workflows/docker.yml)
 
-Forked from https://github.com/sb2nov/resume
+Forked from [sb2nov/resume](https://github.com/sb2nov/resume).
 
-[View the latest version](https://resume.shepherdjerred.com)
+View the [latest version of my résumé](https://resume.shepherdjerred.com)

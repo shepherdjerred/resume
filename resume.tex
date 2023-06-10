@@ -82,8 +82,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Jerred Shepherd} & Email: \href{mailto:shepherdjerred@gmail.com}{shepherdjerred@gmail.com}\\
-  \href{https://shepherdjerred.com/}{https://shepherdjerred.com} & GitHub: \href{https://github.com/shepherdjerred}{https://github.com/shepherdjerred}
+  \textbf{\Large Jerred Shepherd} & Email: \href{mailto:root@sjer.red}{root@sjer.red}\\
+  \href{https://sjer.red}{https://sjer.red} & GitHub: \href{https://github.com/shepherdjerred}{https://github.com/shepherdjerred}
 \end{tabular*}
 
 
@@ -108,8 +108,8 @@
       {Software Engineer}{September 2021 - Present}
       \resumeItemListStart
         \resumeItem{Cross-compilation of R packages targeting macOS}{Setup clang/gcc toolchain leveraging existing Linux build infrastructure to cross-compile C, C++, Fortran, and Rust code for macOS decreasing infrastructure cost by 80\%.}
-        \resumeItem{Automation of end-to-end tests}{Created infrastructure and command-line tooling to automatically run end-to-end tests in on ephemeral machines in AWS.}
-        \resumeItem{TypeScript support}{Migrated front-end build from Webpack to Vite. Added support for TypeScript, and rewrote state handles in Pinia.}
+        \resumeItem{Automation of end-to-end tests}{Created infrastructure and command-line tooling to automatically run end-to-end tests on ephemeral machines in AWS.}
+        \resumeItem{TypeScript support}{Migrated front-end build from Webpack to Vite. Added support for TypeScript, and significantly simplified front-end.}
         \resumeItem{Added support for arm64}{Implemented support for developing Posit Package Manager on the arm64 CPU architecture.}
         \resumeItem{Rewrite of build system}{Analyzed existing build system consisting primarily of Makefiles, Docker, and Jenkins. Rewrote build system to be more understandable, performant, and friendly to developers unfamiliar with the project.}
       \resumeItemListEnd
@@ -130,7 +130,7 @@
         \resumeItemListEnd
 
     \resumeSubheading
-      {Amazon Web Services}{Seattle, WA}
+      {Amazon Web Services (Internship)}{Seattle, WA}
       {Software Development Engineer Intern}{May 2018 - July 2018}
       \resumeItemListStart
         \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2019/02/aws-systems-manager-state-manager-enables-document-sharing-across-accounts/}{State Manager document sharing}}
@@ -143,10 +143,10 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/discord-plays-pokemon}{Discord Plays Pokémon}}{Play Pokémon co-operatively with your friends on the Discord social application. Runs entirely in-browser on a GPU-accelerated Docker container on AWS. Audio and video is streamed via Discord, with game input received through a Discord text channel.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/macos-cross-compiler}{macOS cross-compiler}}{Easily build binaries for macOS on Linux. Supports C, C++, Fortran, and Rust.}
+    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}{}
       {A cross-platform game and game engine written from scratch in Java 11. Uses OpenGL  for 2D graphics rendering and netty for low-level networking with TCP and UDP sockets. Includes \href{https://github.com/harding-capstone/ai}{an AI} trained with a genetic algorithm and a \href{https://github.com/harding-capstone/logic}{robust implementation} of the \href{https://en.wikipedia.org/wiki/Quoridor}{Quoridor} board game.}
-      \resumeSubItem{\href{https://better-skill-capped.shepherdjerred.com/}{Better Skill Capped}}{An improved front-end for the \href{https://www.skill-capped.com/lol}{Skill Capped} website which implements features the original is lacking such as  fuzzy searching, video bookmarking, and offline video viewing. Written using Python, TypeScript, and React. Hosted on AWS with Lambda and S3.}
-    \resumeSubItem{\href{https://github.com/shepherdjerred/gpt-2-simple-sagemaker-container}{GPT-2 SageMaker Container}}{Docker image and AWS Lambda Function to train and serve a fine-tined GPT-2 model with AWS SageMaker}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------

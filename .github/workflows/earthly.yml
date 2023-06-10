@@ -1,19 +1,23 @@
-name: Docker Image CI/CD
+name: Earthly CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build the Docker image
-        run: docker build -t latex .
-      - name: Run the Docker image
-        run: docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
-      - uses: jakejarvis/s3-sync-action@v0.5.1
+      - name: Setup Earthly
+        uses: earthly/actions-setup@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          version: "latest"
+      - name: Build
+        run: earthly +build
+      - name: Upload resume to S3
+        uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --delete
         env:
