@@ -1,6 +1,6 @@
 # Résumé
 
-[![Docker Image CI/CD](https://github.com/shepherdjerred/resume/actions/workflows/docker.yml/badge.svg)](https://github.com/shepherdjerred/resume/actions/workflows/docker.yml)
+[![Earthly CI/CD](https://github.com/shepherdjerred/resume/actions/workflows/earthly.yml/badge.svg)](https://github.com/shepherdjerred/resume/actions/workflows/earthly.yml)
 
 Forked from [sb2nov/resume](https://github.com/sb2nov/resume).
 
