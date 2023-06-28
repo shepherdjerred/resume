@@ -104,18 +104,17 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Posit, PBC (formerly RStudio, PBC)}{Remote}
+      {Package Manager at Posit, PBC (formerly RStudio, PBC)}{Remote}
       {Software Engineer}{September 2021 - Present}
       \resumeItemListStart
-        \resumeItem{Cross-compilation of R packages targeting macOS}{Setup clang/gcc toolchain leveraging existing Linux build infrastructure to cross-compile C, C++, Fortran, and Rust code for macOS decreasing infrastructure cost by 80\%.}
-        \resumeItem{Automation of end-to-end tests}{Created infrastructure and command-line tooling to automatically run end-to-end tests on ephemeral machines in AWS.}
-        \resumeItem{TypeScript support}{Migrated front-end build from Webpack to Vite. Added support for TypeScript, and significantly simplified front-end.}
-        \resumeItem{Added support for arm64}{Implemented support for developing Posit Package Manager on the arm64 CPU architecture.}
-        \resumeItem{Rewrite of build system}{Analyzed existing build system consisting primarily of Makefiles, Docker, and Jenkins. Rewrote build system to be more understandable, performant, and friendly to developers unfamiliar with the project.}
+        \resumeItem{End-to-end tests}{Created infrastructure and command-line tooling to automatically run end-to-end tests on ephemeral machines in AWS.}
+        \resumeItem{Front-end}{Migrated front-end build from Webpack to Vite. Re-wrote front-end in TypeScript using the Vue Composition API. Migrated client-side state from Vuex to TanStack Query. }
+        \resumeItem{Documentation}{Simplified the build process for the product's documentation using \href{Earthly}{https://earthly.dev/}. This significantly increased the productivity of both developers and technical writers.}
+        \resumeItem{Build system}{Analyzed existing build system consisting primarily of Makefiles, Docker, and Jenkins. Rewrote Makefiles to be more understandable, performant, and friendly to developers unfamiliar with the project. Added support for multiple operating systems and CPU architectures.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Amazon Web Services}{Seattle, WA}
+      {Systems Manager at Amazon Web Services}{Seattle, WA}
       {Software Development Engineer}{July 2019 - August 2021}
       \resumeItemListStart
         \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2020/05/aws-systems-manager-now-supports-resource-groups-as-targets-for-state-manager/}{State Manager resource groups feature}}
@@ -130,7 +129,7 @@
         \resumeItemListEnd
 
     \resumeSubheading
-      {Amazon Web Services (Internship)}{Seattle, WA}
+      {Systems Manager at Amazon Web Services (Internship)}{Seattle, WA}
       {Software Development Engineer Intern}{May 2018 - July 2018}
       \resumeItemListStart
         \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2019/02/aws-systems-manager-state-manager-enables-document-sharing-across-accounts/}{State Manager document sharing}}
@@ -143,10 +142,8 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/shepherdjerred/discord-plays-pokemon}{Discord Plays Pokémon}}{Play Pokémon co-operatively with your friends on the Discord social application. Runs entirely in-browser on a GPU-accelerated Docker container on AWS. Audio and video is streamed via Discord, with game input received through a Discord text channel.}
-    \resumeSubItem{\href{https://github.com/shepherdjerred/macos-cross-compiler}{macOS cross-compiler}}{Easily build binaries for macOS on Linux. Supports C, C++, Fortran, and Rust.}
-    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}{}
-      {A cross-platform game and game engine written from scratch in Java 11. Uses OpenGL  for 2D graphics rendering and netty for low-level networking with TCP and UDP sockets. Includes \href{https://github.com/harding-capstone/ai}{an AI} trained with a genetic algorithm and a \href{https://github.com/harding-capstone/logic}{robust implementation} of the \href{https://en.wikipedia.org/wiki/Quoridor}{Quoridor} board game.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/discord-plays-pokemon}{Discord Plays Pokémon}}{Play Pokémon co-operatively with your friends on the Discord social application. Runs entirely in-browser on a GPU-accelerated Docker container with support for running on AWS. Audio and video is streamed via Discord, with game input received through a Discord text channel.}
+    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}{A cross-platform game and game engine written from scratch in Java 11. Uses OpenGL  for 2D graphics rendering and netty for low-level networking with TCP and UDP sockets. Includes \href{https://github.com/harding-capstone/ai}{an AI} trained with a genetic algorithm and a \href{https://github.com/harding-capstone/logic}{robust implementation} of the \href{https://en.wikipedia.org/wiki/Quoridor}{Quoridor} board game.}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
