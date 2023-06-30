@@ -1,7 +1,7 @@
 # Résumé
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/shepherdjerred/resume)
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/shepherdjerred/resume)
 
 Forked from [sb2nov/resume](https://github.com/sb2nov/resume).
 
-View the [latest version of my résumé](https://resume.shepherdjerred.com)
+View the [latest version of my résumé](https://resume.sjer.red)

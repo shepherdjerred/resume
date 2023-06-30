@@ -11,6 +11,9 @@
         "esbenp.prettier-vscode",
         "earthly.earthfile-syntax-highlighting"
       ]
+    },
+    "devpod": {
+      "prebuildRepository": "ghcr.io/shepherdjerred/better-skill-capped"
     }
   },
   "features": {
