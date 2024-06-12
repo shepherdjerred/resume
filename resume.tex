@@ -107,7 +107,9 @@
       {Package Manager at Posit Software, PBC (formerly RStudio, PBC)}{Remote}
       {Software Engineer}{September 2021 - Present}
       \resumeItemListStart
-        \resumeItem{Front-end rewrite and redesign}{}
+        \resumeItem{Frontend rewrite and partial redesign}{Led and implemented a successful rewrite of Package Manager's frontend from Webpack/Vue 2/JavaScript to Vite/Vue 3/TypeScript. Halved the number of third-party dependencies. Decreased the size of the frontend by 80\%. Implemented request caching with TanStack query and runtime typechecking with Zod. Implemented a partial redesign of the interface to make the product more intuitive for first-time users. Implemented best practices such as automated linters, formatters, deploy previews, dependency updates, and tools for a shorter development cycle.}
+        \resumeItem{Automated end-to-end testing}{Designed and implemented a framework in Go using Docker for unified testing Package Manager's CLI, backend, frontend, and documentation. This replaced a plethora of tests written in bash/BATS and Python/Selenium. The framework shortened development cycles which allowed for developers to quickly verify their changes locally instead of pushing and waiting on CI.}
+        \resumeItem{Secure bootstraping feature}{Designed and implemented a feature to securely configure Package Manager over an insecure channel using public key cryptography.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -121,7 +123,6 @@
         \resumeItem{Front end for \href{https://docs.aws.amazon.com/systems-manager/latest/userguide/change-manager.html}{AWS Change Manager}}{Implemented the front-end for AWS Change Manager using React and TypeScript.}
         \resumeItem{Service fleet optimization}
           {Identified and implemented ideal server hardware configuration for team's software stack. Updated service dependencies and language runtimes. These improvements led to a 66\% reduction in server infrastructure cost.}
-        \resumeItem{Built service in \href{https://aws.amazon.com/blogs/publicsector/announcing-the-new-aws-secret-region/}{top secret AWS region}}{Modified service code and infrastructure while supporting requirements top secret security constraints.}
         \resumeItem{Infrastructure improvements}{Significantly reduced the time to build a new AWS region for the State Manager service. Identified and implemented process improvements which led to a drastic reduction in operational work.}
         \resumeItemListEnd
 

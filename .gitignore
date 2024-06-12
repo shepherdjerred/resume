@@ -5,3 +5,4 @@ resume.*
 !resume.tex
 texput.log
 .tmp-earthly-out
+.DS_Store
