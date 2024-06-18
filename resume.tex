@@ -91,8 +91,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Georgia Institute of Technology}{Remote}
+      {Georgia Institute of Technology}{Atlanta, GA}
       {Master of Science in Computer Science}{August 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Relevant coursework}{Compilers, Distributed Systems, Advanced Operating Systems}
+      \resumeItemListEnd
     \resumeSubheading
       {Harding University}{Searcy, AR}
       {Bachelor of Science in Software Development}{August 2015 -- May 2019}
@@ -104,45 +107,39 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Package Manager at Posit Software, PBC (formerly RStudio, PBC)}{Remote}
+      {Posit Software}{Remote}
       {Software Engineer}{September 2021 - Present}
       \resumeItemListStart
-        \resumeItem{Frontend rewrite and partial redesign}{Led and implemented a successful rewrite of Package Manager's frontend from Webpack/Vue 2/JavaScript to Vite/Vue 3/TypeScript. Halved the number of third-party dependencies. Decreased the size of the frontend by 80\%. Implemented request caching with TanStack query and runtime typechecking with Zod. Implemented a partial redesign of the interface to make the product more intuitive for first-time users. Implemented best practices such as automated linters, formatters, deploy previews, dependency updates, and tools for a shorter development cycle.}
-        \resumeItem{Automated end-to-end testing}{Designed and implemented a framework in Go using Docker for unified testing Package Manager's CLI, backend, frontend, and documentation. This replaced a plethora of tests written in bash/BATS and Python/Selenium. The framework shortened development cycles which allowed for developers to quickly verify their changes locally instead of pushing and waiting on CI.}
-        \resumeItem{Secure bootstraping feature}{Designed and implemented a feature to securely configure Package Manager over an insecure channel using public key cryptography.}
+        \resumeItem{Frontend redesign}{Led a UI redesign focusing on the first-use experience and increasing accessibility. This aligned with our business's goal of making the product more approachable to new users.}
+        \resumeItem{Frontend rewrite}{Led a successful rewrite of Package Manager's frontend to Vue 3 \& TypeScript. Eliminated 70\% of dependencies and reduced bundle size by 90\%.}
+        \resumeItem{Automated testing framework}{Identified that the product was difficult to test. Gained the team's support to design and implement a containerized testing framework. The framework allowed for any aspect of the product to be tested locally in isolation which allowed the team to move faster and with more confidence.}
+        \resumeItem{Developer UX}{Identified deficiencies in developer workflows and tooling. Collaborated with the team to shorten feedback loops by speeding up CI and improving development environments. Set up automated linters, formatters, and dependency updates.}
+        \resumeItem{macOS cross-compiler}{Identified that the proposed approach for compiling for macOS would be expensive to implement and maintain. Created a proof-of-concept macOS cross-compiler toolchain by adapting existing open-source projects to target arm64 macOS. Guided team members who brought the proof-of-concept into production. The approach allowed the team to quickly reach our goal of building R packages (which contain C, C++, Fortran, and Rust code) for macOS.}
+        \resumeItem{Backend}{Implemented features for the product's Go backend. Migrated the backend to a portable static binary which reduced the testing burden and the complexity of distributing the product.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Systems Manager at Amazon Web Services}{Seattle, WA}
+      {Amazon Web Services}{Seattle, WA}
       {Software Development Engineer}{July 2019 - August 2021}
       \resumeItemListStart
-        \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2020/05/aws-systems-manager-now-supports-resource-groups-as-targets-for-state-manager/}{State Manager resource groups feature}}
-          {Designed, implemented, tested, and deployed a feature which added support for resource group targets to AWS Systems Manager's desired state configuration service.}
-        \resumeItem{Developer productivity improvements}{Developed several productivity tools for use by the State Manager team which led to a significant time savings when developing and deploying code including a notification service for CI/CD events, a service operations report generator, and an infrastructure CLI toolkit.}
-        \resumeItem{Intern mentorship}{Mentored an intern during their twelve week internship who was ultimately offered a full-time position. Identified a project and scoped the requirements for the intern. Helped the intern during their onboarding, design, and the development of their project which was deployed to production.}
-        \resumeItem{Front end for \href{https://docs.aws.amazon.com/systems-manager/latest/userguide/change-manager.html}{AWS Change Manager}}{Implemented the front-end for AWS Change Manager using React and TypeScript.}
-        \resumeItem{Service fleet optimization}
-          {Identified and implemented ideal server hardware configuration for team's software stack. Updated service dependencies and language runtimes. These improvements led to a 66\% reduction in server infrastructure cost.}
-        \resumeItem{Infrastructure improvements}{Significantly reduced the time to build a new AWS region for the State Manager service. Identified and implemented process improvements which led to a drastic reduction in operational work.}
+        \resumeItem{Process automation}{Identified manual, error-prone, time-consuming processes for on-call operators that could be automated. Gathered support from the team and implemented a tool to root cause issues using metrics and application logs automatically. Time for these tasks was reduced from ~4 hours per week to minutes.}
+        \resumeItem{Mentorship}{Mentored an intern who was hired full-time. Guided technical and non-technical skills. Mentored peers to improve their technical skills.}
+        \resumeItem{Operations}{Participated in the on-call rotation for a service that managed tens of millions of AWS EC2 instances and received thousands of requests per second. Responded to, root-caused, and triaged incidents.}
+        \resumeItem{Backend}{Implemented features using a distributed state machine with DynamoDB, SQS, and S3. Optimized fleet configuration which led to a 66\% reduction in server hardware costs.}
+        \resumeItem{Frontend}{Implemented frontend for a new AWS service using React and TypeScript.}
         \resumeItemListEnd
-
-    \resumeSubheading
-      {Systems Manager at Amazon Web Services (Internship)}{Seattle, WA}
-      {Software Development Engineer Intern}{May 2018 - July 2018}
-      \resumeItemListStart
-        \resumeItem{\href{https://aws.amazon.com/about-aws/whats-new/2019/02/aws-systems-manager-state-manager-enables-document-sharing-across-accounts/}{State Manager document sharing}}
-          {Designed, implemented, tested, and deployed a feature which adds cross-account document sharing for AWS Systems Manager's desired state configuration  service.}
-      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Personal Projects}
+\section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/shepherdjerred/homelab}{Kubernetes Homelab}}{A K3s cluster running on a NAS in my home. Managed with cdk8s and ArgoCD. I've written about the technical details on \href{TODO}{my blog}}
-    \resumeSubItem{\href{https://github.com/shepherdjerred/discord-plays-pokemon}{Discord Plays Pokémon}}{Play Pokémon co-operatively with your friends on the Discord social application. Runs entirely in-browser on a GPU-accelerated Docker container with support for running on AWS. Audio and video is streamed via Discord, with game input received through a Discord text channel or a React frontend.}
-    \resumeSubItem{\href{https://github.com/harding-capstone/engine}{Castle Casters}}{A cross-platform game and game engine written from scratch in Java 11. Uses OpenGL  for 2D graphics rendering and netty for low-level networking with TCP and UDP sockets. Includes \href{https://github.com/harding-capstone/ai}{an AI} trained with a genetic algorithm and a \href{https://github.com/harding-capstone/logic}{robust implementation} of the \href{https://en.wikipedia.org/wiki/Quoridor}{Quoridor} board game.}
+    \resumeSubItem{Compiler}{Implemented a compiler from scratch for the Tiger language targeting MIPS assembly.}
+    \resumeSubItem{Paxos}{Implemented the Paxos consensus algorithm from scratch.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/castle-casters}{Game Engine}}{A cross-platform game and game engine using OpenGL.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/homelab}{Kubernetes Homelab}}{A k3s cluster running on hardware at my home. Managed with cdk8s and ArgoCD.}
+    \resumeSubItem{\href{https://github.com/shepherdjerred/discord-plays-pokemon}{Multiplayer Game Emulator}}{Play Pokémon co-operatively with your friends using Discord.}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
