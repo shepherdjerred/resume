@@ -43,13 +43,12 @@ export class Resume {
   }
 
   /**
-   * Deploys the resume PDF to SeaweedFS S3.
-   * @param source The source directory containing resume.tex
+   * Deploys the resume PDF and index.html to SeaweedFS S3.
+   * @param source The source directory containing resume.tex and index.html
    * @param s3AccessKey The S3 access key for SeaweedFS
    * @param s3SecretKey The S3 secret key for SeaweedFS
    * @param endpoint The S3 endpoint URL (default: https://seaweedfs.sjer.red)
    * @param bucket The S3 bucket name (default: resume)
-   * @param objectKey The S3 object key (default: resume.pdf)
    * @returns A message indicating success or failure
    */
   @func()
@@ -60,9 +59,9 @@ export class Resume {
     s3SecretKey: Secret,
     @argument() endpoint = "https://seaweedfs.sjer.red",
     @argument() bucket = "resume",
-    @argument() objectKey = "resume.pdf",
   ): Promise<string> {
     const pdf = this.build(source);
+    const indexHtml = source.file("index.html");
 
     const result = await dag
       .container()
@@ -70,6 +69,7 @@ export class Resume {
       .withSecretVariable("AWS_ACCESS_KEY_ID", s3AccessKey)
       .withSecretVariable("AWS_SECRET_ACCESS_KEY", s3SecretKey)
       .withFile("/resume.pdf", pdf)
+      .withFile("/index.html", indexHtml)
       .withExec([
         "aws",
         "--endpoint-url",
@@ -77,10 +77,21 @@ export class Resume {
         "s3",
         "cp",
         "/resume.pdf",
-        `s3://${bucket}/${objectKey}`,
+        `s3://${bucket}/resume.pdf`,
+      ])
+      .withExec([
+        "aws",
+        "--endpoint-url",
+        endpoint,
+        "s3",
+        "cp",
+        "/index.html",
+        `s3://${bucket}/index.html`,
+        "--content-type",
+        "text/html",
       ])
       .stdout();
 
-    return `Deployed resume.pdf to s3://${bucket}/${objectKey}\n${result}`;
+    return `Deployed resume.pdf and index.html to s3://${bucket}/\n${result}`;
   }
 }
