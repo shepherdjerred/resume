@@ -1,0 +1,11 @@
+{
+  "name": "@resume/dagger",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dagger": {
+    "runtime": "bun"
+  }
+}
